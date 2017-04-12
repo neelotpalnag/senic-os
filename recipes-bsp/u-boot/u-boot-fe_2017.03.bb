@@ -12,7 +12,7 @@ SRC_URI = "git://git@tau.free-electrons.com/senic/uboot.git;protocol=ssh;branch=
 	   file://boot.cmd \
 	   "
 
-SRCREV = "a25600a139b47eb9d2a1379bb5773fd51a257e14"
+SRCREV = "10c97b571e72382fa75c10bb3b16bc6baff0d28e"
 PV = "v2017.03+git${SRCPV}"
 S = "${WORKDIR}/git"
 
