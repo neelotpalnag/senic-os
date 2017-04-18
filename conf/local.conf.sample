@@ -26,6 +26,7 @@
 #MACHINE ?= "qemux86-64"
 
 MACHINE = "nanopi-m1"
+DISTRO = "senic"
 
 #
 # Where to place downloads
