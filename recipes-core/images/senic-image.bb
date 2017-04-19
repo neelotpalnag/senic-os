@@ -8,4 +8,5 @@ IMAGE_INSTALL += " \
 	python3 \
 	packagegroup-core-ssh-openssh \
 	openssl \
+	usbutils \
 "
