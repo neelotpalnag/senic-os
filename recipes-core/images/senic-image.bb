@@ -6,4 +6,6 @@ IMAGE_INSTALL += " \
 	htop \
 	python \
 	python3 \
+	packagegroup-core-ssh-openssh \
+	openssl \
 "
