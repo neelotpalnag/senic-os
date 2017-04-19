@@ -8,4 +8,5 @@ BBFILES ?= ""
 BBLAYERS ?= " \
 	##OEROOT##/meta \
 	##OEROOT##/../meta-senic \
+	##OEROOT##/../meta-openembedded/meta-oe \
 "
