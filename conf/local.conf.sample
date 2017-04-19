@@ -25,7 +25,7 @@
 #MACHINE ?= "qemux86"
 #MACHINE ?= "qemux86-64"
 
-MACHINE = "nanopi-m1-senic"
+MACHINE = "senic-hub-beta"
 DISTRO = "senic"
 
 #
