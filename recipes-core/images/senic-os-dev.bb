@@ -1,4 +1,4 @@
-require senic-image-minimal.bb
+require senic-os-minimal.bb
 
 IMAGE_INSTALL += " \
 	${@bb.utils.contains("DISTRO_FEATURES", "bluetooth", "bluez5-noinst-tools", "", d)} \
@@ -9,4 +9,5 @@ IMAGE_INSTALL += " \
 	packagegroup-core-ssh-openssh \
 	openssl \
 	usbutils \
+	vim \
 "
