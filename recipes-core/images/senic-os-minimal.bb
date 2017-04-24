@@ -8,4 +8,5 @@ IMAGE_BOOT_FILES = "zImage zImage-${KERNEL_DEVICETREE} boot.scr"
 IMAGE_INSTALL = " \
 	packagegroup-core-boot \
 	packagegroup-base \
+	ifupdown \
 "
