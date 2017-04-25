@@ -1,0 +1,5 @@
+.repo/
+bin/
+meta-openembedded/
+oe/
+
