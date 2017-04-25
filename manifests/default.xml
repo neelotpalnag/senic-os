@@ -8,5 +8,4 @@
 	<project path="oe" name="openembedded-core" remote="oe" revision="morty" />
 	<project path="oe/bitbake" name="bitbake" remote="oe" revision="1.32" />
 	<project name="meta-openembedded" remote="oe" revision="morty" />
-	<project name="meta-senic" remote="fe" revision="morty" />
 </manifest>
