@@ -7,5 +7,6 @@ IMAGE_INSTALL += " \
 	python3 \
 	python3-pip \
 	packagegroup-core-ssh-openssh \
+	lighttpd \
 	openssl \	
 "
