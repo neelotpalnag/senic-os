@@ -3,3 +3,11 @@
 # The loopback interface
 auto lo
 iface lo inet loopback
+
+# Wireless interfaces
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+	wireless_mode managed
+	wireless_essid any	
+	wpa-conf /etc/wpa_supplicant.conf
