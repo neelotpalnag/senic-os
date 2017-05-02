@@ -1,0 +1,8 @@
+ctrl_interface=/var/run/wpa_supplicant
+ctrl_interface_group=0
+update_config=1
+
+network={
+        ssid="senic-sandbox"
+        psk=3131f3cd67dba8f085e63e87356f5600efe79a5d90412a16e512d6b126f30d0d
+}
