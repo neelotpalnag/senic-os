@@ -1,4 +1,3 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
-SRC_URI += "file://interfaces"
-
+SRC_URI += "file://wpa_supplicant.conf-sane"
