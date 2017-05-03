@@ -1,8 +1,3 @@
-export TEMPLATECONF=$(PWD)/meta-senic/conf
-export BUILDDIR=$(PWD)/build/
-export BBPATH=$(PWD)/build:$(PWD)/meta-senic/
-export PATH:=$(PWD)/oe/bitbake/bin:$(PATH)
-
 oe/README:  .repo/manifest.xml
 	./bin/repo sync -j3
 
@@ -17,7 +12,7 @@ bin/repo:
 	chmod a+x bin/repo
 
 build: .repo/manifest.xml
-	bitbake senic-os senic-os-dev
+	./build.sh
 
 clean:
 	git clean -fXd
