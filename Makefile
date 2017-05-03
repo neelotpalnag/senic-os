@@ -16,7 +16,7 @@ bin/repo:
 	chmod a+x bin/repo
 
 build: .repo/manifest.xml
-       PATH=${PWD}/oe/bitbake/bin:${PATH} bitbake senic-os-release senic-os-dev
+       PATH=${PWD}/oe/bitbake/bin:${PATH} bitbake senic-os senic-os-dev
 
 clean:
 	git clean -fXd
