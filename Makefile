@@ -3,6 +3,7 @@ oe/README:  .repo/manifest.xml
 
 sync:  .repo/manifest.xml
 	./bin/repo sync -j3
+	git pull
 
 .repo/manifest.xml: bin/repo
 	./bin/repo init -u . -m manifests/default.xml
@@ -11,7 +12,7 @@ bin/repo:
 	wget https://storage.googleapis.com/git-repo-downloads/repo -O bin/repo
 	chmod a+x bin/repo
 
-build: .repo/manifest.xml
+build: .repo/manifest.xml sync
 	./build.sh
 
 clean:
