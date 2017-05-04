@@ -7,4 +7,6 @@ IMAGE_INSTALL += " \
 	tree \
 	sudo \
 	git \
+	curl \
+	bash \
 "
