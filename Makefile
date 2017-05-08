@@ -18,4 +18,7 @@ build: .repo/manifest.xml sync
 clean:
 	git clean -fXd
 
-.PHONY: clean sync build
+upload:
+	rsync -av manifests meta-senic --chown=senic osbuild:/mnt/data/senic-os/
+
+.PHONY: clean sync build upload
