@@ -9,4 +9,5 @@ IMAGE_INSTALL += " \
 	git \
 	curl \
 	bash \
+	python-pip \
 "
