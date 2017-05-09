@@ -12,8 +12,13 @@ bin/repo:
 	wget https://storage.googleapis.com/git-repo-downloads/repo -O bin/repo
 	chmod a+x bin/repo
 
+<<<<<<< d4ba757bcec263931c8d24a7e6041a88d9bdc3e8
 build: .repo/manifest.xml sync
 	./buildit
+=======
+build: .repo/manifest.xml
+	./build.sh
+>>>>>>> Don't sync when building
 
 clean:
 	git clean -fXd
