@@ -13,7 +13,7 @@ bin/repo:
 	chmod a+x bin/repo
 
 build: .repo/manifest.xml sync
-	./build.sh
+	./buildit
 
 clean:
 	git clean -fXd
