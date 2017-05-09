@@ -10,4 +10,6 @@ IMAGE_INSTALL += " \
 	curl \
 	bash \
 	python-pip \
+	iperf3 \ 
+	stress \
 "
