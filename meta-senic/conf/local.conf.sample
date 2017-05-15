@@ -26,7 +26,7 @@
 #MACHINE ?= "qemux86-64"
 
 MACHINE = "senic-hub-beta"
-DISTRO = "senic"
+DISTRO = "senic-dev"
 
 #
 # Where to place downloads
