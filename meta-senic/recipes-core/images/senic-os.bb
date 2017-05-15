@@ -15,6 +15,7 @@ IMAGE_INSTALL = " \
 	openssl \
 	lighttpd \
 	python \
+	python-meld3 \
 	python3 \
 	python3-pip \
 	python3-dbus \
