@@ -11,7 +11,7 @@ You can then perform a build with these settings on the host like so::
 
     source oe/oe-init-build-env 
 
-This will use (and create) the default build directory named ``build``, however, you can provide an arbitrary custom name (usually 'your' username) i.e.
+This will use (and create) the default build directory named ``build``, however, you can provide an arbitrary custom name (usually 'your' username) i.e.::
 
     source oe/oe-init-build-env xxx
 

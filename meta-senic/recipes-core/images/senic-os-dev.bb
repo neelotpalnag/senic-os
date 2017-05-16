@@ -12,4 +12,5 @@ IMAGE_INSTALL += " \
 	python-pip \
 	iperf3 \ 
 	stress \
+	bootstrap-ansible \
 "
