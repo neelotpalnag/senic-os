@@ -14,6 +14,7 @@ IMAGE_INSTALL = " \
 	ifupdown \
 	openssl \
 	lighttpd \
+	os-release \
 	python \
 	python-supervisor \
 	python3 \
