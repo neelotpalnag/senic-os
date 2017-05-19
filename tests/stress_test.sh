@@ -8,5 +8,5 @@
 # Short-Description: Put all four CPUs into 100% load
 ### END INIT INFO
 
-echo -e "\n [Senic Hub] Starting stress test"
+echo -e "[Senic Hub] Starting stress test"
 stress -c 4 -q &

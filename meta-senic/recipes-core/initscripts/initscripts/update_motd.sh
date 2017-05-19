@@ -8,7 +8,7 @@
 # Short-Description: Update the motd file with actual data
 ### END INIT INFO
 
-echo -e "\n [Senic Hub] Updating motd"
+echo -e "[Senic Hub] Updating motd"
 
 HW="$(uname -n)"
 KERNEL="$(uname -r)"
