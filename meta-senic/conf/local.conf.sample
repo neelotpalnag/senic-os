@@ -67,7 +67,7 @@ SSTATE_DIR ?= "${TOPDIR}/../shared/sstate-cache"
 #
 # The default is a tmp directory under TOPDIR.
 #
-TMPDIR = "${TOPDIR}/../shared/tmp"
+#TMPDIR = "${TOPDIR}/../shared/tmp"
 
 
 #
