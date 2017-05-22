@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
+buildenv=${1:-build}
 export TEMPLATECONF=../meta-senic/conf
-source oe/oe-init-build-env build/
+source oe/oe-init-build-env $buildenv/
 bitbake senic-os senic-os-dev
 
