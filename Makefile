@@ -1,3 +1,5 @@
+env=build
+
 oe/README:  .repo/manifest.xml
 	./bin/repo sync -j3
 
@@ -21,10 +23,10 @@ clean:
 upload:
 	rsync -av manifests meta-senic --chown=senic osbuild:/mnt/data/senic-os/
 
-build/tmp-glibc/deploy/images/senic-hub-beta:
-	mkdir -p build/tmp-glibc/deploy/images/senic-hub-beta
+$(env)/tmp-glibc/deploy/images/senic-hub-beta/:
+	mkdir -p $(env)/tmp-glibc/deploy/images/senic-hub-beta/
 
-download: build/tmp-glibc/deploy/images/senic-hub-beta/
-	rsync -avzh osbuild:/mnt/data/senic-os/shared/tmp-glibc/deploy/images/senic-hub-beta/ build/tmp-glibc/deploy/images/senic-hub-beta/
+download: $(env)/tmp-glibc/deploy/images/senic-hub-beta/
+	rsync -avzh osbuild:/mnt/data/senic-os/$(env)/tmp-glibc/deploy/images/senic-hub-beta/ $(env)/tmp-glibc/deploy/images/senic-hub-beta/
 
 .PHONY: clean sync build upload download
