@@ -8,11 +8,11 @@ DEPENDS += "dtc-native"
 COMPATIBLE_MACHINE = "(nanopi-m1|senic-hub-beta|nanopi-neo|senic-hub)"
 
 SRCBRANCH = "senic/v2017.03"
-SRC_URI = "git://git@tau.free-electrons.com/senic/uboot.git;protocol=ssh;branch=${SRCBRANCH}; \
+SRC_URI = "git://git@github.com/getsenic/senic-uboot.git;protocol=ssh;branch=${SRCBRANCH}; \
 	   file://boot.cmd \
 	   "
 
-SRCREV = "10c97b571e72382fa75c10bb3b16bc6baff0d28e"
+SRCREV = "6c80d208f02ddcc1aa10cc963630e9e79df18a90"
 PV = "v2017.03+git${SRCPV}"
 S = "${WORKDIR}/git"
 
