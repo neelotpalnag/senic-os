@@ -20,7 +20,6 @@ IMAGE_INSTALL = " \
 	python \
 	python-supervisor \
 	python3 \
-	python3-native \
 	python3-pip \
 	python3-dbus \
 	python3-pygobject \
