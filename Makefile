@@ -27,6 +27,6 @@ $(env)/tmp-glibc/deploy/images/senic-hub-beta/:
 	mkdir -p $(env)/tmp-glibc/deploy/images/senic-hub-beta/
 
 download: $(env)/tmp-glibc/deploy/images/senic-hub-beta/
-	rsync -avzh osbuild:/mnt/data/senic-os/$(env)/tmp-glibc/deploy/images/senic-hub-beta/ $(env)/tmp-glibc/deploy/images/senic-hub-beta/
+	rsync -avzh osbuild:/mnt/data/senic-os/$(env)/tmp-glibc/deploy/images/senic-hub-beta/*.wic.bz2 $(env)/tmp-glibc/deploy/images/senic-hub-beta/
 
 .PHONY: clean sync build upload download
