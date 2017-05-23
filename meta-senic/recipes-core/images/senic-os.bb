@@ -19,6 +19,7 @@ IMAGE_INSTALL = " \
 	glibc-utils \ 
 	python \
 	python-supervisor \
+	python3-multiprocessing \
 	python3 \
 	python3-pip \
 	python3-dbus \
