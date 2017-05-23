@@ -1,4 +1,4 @@
-setenv fdtfile zImage-sun8i-h3-nanopi-neo.dtb
+setenv fdtfile zImage-sun8i-h3-senic-hub.dtb
 setenv bootargs console=${console} root=/dev/mmcblk0p2 rootwait panic=10 ${extra}
 load mmc 0:1 ${fdt_addr_r} ${fdtfile} || load mmc 0:1 ${fdt_addr_r} boot/${fdtfile}
 load mmc 0:1 ${kernel_addr_r} zImage || load mmc 0:1 ${kernel_addr_r} boot/zImage || load mmc 0:1 ${kernel_addr_r} uImage || load mmc 0:1 ${kernel_addr_r} boot/uImage
