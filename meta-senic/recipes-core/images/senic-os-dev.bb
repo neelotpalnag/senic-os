@@ -9,6 +9,7 @@ IMAGE_INSTALL += " \
 	git \
 	curl \
 	bash \
+	bash-completion \
 	python-pip \
 	python3-pip \
 	iperf3 \ 
