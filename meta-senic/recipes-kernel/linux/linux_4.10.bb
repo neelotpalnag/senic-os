@@ -9,12 +9,14 @@ inherit kernel
 
 require recipes-kernel/linux/linux-dtb.inc
 
-S = "${WORKDIR}/${PN}-${PV}"
 RDEPENDS_kernel-base=""
 
-SRC_URI[md5sum] = "b5e7f6b9b2fe1b6cc7bc56a3a0bfc090"
-SRC_URI[sha256sum] = "3c95d9f049bd085e5c346d2c77f063b8425f191460fcd3ae9fe7e94e0477dc4b"
+KBRANCH = "senic/4.10"
+SRCREV = "a232cfbcb9db4a3cdb1a85cbbb054974e71021a6"
 
-SRC_URI = "${KERNELORG_MIRROR}/linux/kernel/v4.x/linux-${PV}.tar.xz \
+PV = "4.10+git${SRCPV}"
+S = "${WORKDIR}/git"
+
+SRC_URI = "git://github.com/getsenic/senic-os-linux.git;protocol=git;branch=${KBRANCH} \
         file://defconfig \
         "
