@@ -13,5 +13,7 @@ IMAGE_INSTALL += " \
 	python3-pip \
 	iperf3 \ 
 	stress \
+	rsync \
+	screen \
 	bootstrap-ansible \
 "
