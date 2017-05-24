@@ -22,7 +22,6 @@ IMAGE_INSTALL = " \
 	python3-netifaces \
 	python3-multiprocessing \
 	python3 \
-	python3-pip \
 	python3-dbus \
 	python3-pygobject \
 "

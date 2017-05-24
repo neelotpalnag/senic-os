@@ -10,6 +10,7 @@ IMAGE_INSTALL += " \
 	curl \
 	bash \
 	python-pip \
+	python3-pip \
 	iperf3 \ 
 	stress \
 	bootstrap-ansible \
