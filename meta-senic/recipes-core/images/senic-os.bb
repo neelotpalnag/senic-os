@@ -21,6 +21,8 @@ IMAGE_INSTALL = " \
 	python-supervisor \
 	python3-netifaces \
 	python3-multiprocessing \
+	python3-cffi \
+	python3-cryptography \
 	python3 \
 	python3-dbus \
 	python3-pygobject \
