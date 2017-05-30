@@ -16,20 +16,10 @@ NOINST_TOOLS_READLINE ?= " \
     tools/btmgmt \
 "
 
+PACKAGECONFIG += "experimental"
 # noinst programs in Makefile.tools that are conditional on EXPERIMENTAL
 # support
 NOINST_TOOLS_EXPERIMENTAL ?= " \
-    emulator/btvirt \
-    emulator/b1ee \
-    emulator/hfp \
-    tools/3dsp \
-    tools/mgmt-tester \
-    tools/gap-tester \
-    tools/l2cap-tester \
-    tools/sco-tester \
-    tools/smp-tester \
-    tools/hci-tester \
-    tools/rfcomm-tester \
     tools/bdaddr \
     tools/avinfo \
     tools/avtest \
