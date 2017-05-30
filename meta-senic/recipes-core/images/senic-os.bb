@@ -17,6 +17,7 @@ IMAGE_INSTALL = " \
 	os-release \
 	glibc-locale \
 	glibc-utils \ 
+	networkmanager \
 	python \
 	python-supervisor \
 	python3-netifaces \
