@@ -14,7 +14,6 @@ LIC_FILES_CHKSUM = ""
 
 # No information for SRC_URI yet (only an external source tree was specified)
 SRC_URI = "file://authorized_keys"
-# NOTE: no Makefile found, unable to determine what needs to be done
 
 do_configure () {
 	# Specify any needed configure commands here
