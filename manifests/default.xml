@@ -3,7 +3,7 @@
 	<remote name="oe" fetch="git://git.openembedded.org/" />
 	<remote name="fe" fetch="ssh://git@tau.free-electrons.com/senic/" />
 
-	<default revision="master" remote="fe" />
+	<default revision="master" remote="oe" />
 
 	<project path="oe" name="openembedded-core" remote="oe" revision="morty" />
 	<project path="oe/bitbake" name="bitbake" remote="oe" revision="1.32" />
