@@ -3,7 +3,7 @@ DESCRIPTION = "Mainline Linux kernel"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
-COMPATIBLE_MACHINE = "(nanopi-m1|senic-hub-beta|nanopi-neo|senic-hub)"
+COMPATIBLE_MACHINE = "(senic-hub-beta|senic-hub)"
 
 inherit kernel
 
