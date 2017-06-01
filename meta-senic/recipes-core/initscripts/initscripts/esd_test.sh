@@ -13,7 +13,7 @@ echo none > /sys/class/leds/nanopi:blue:status/trigger
 echo 0 > /sys/class/leds/nanopi:blue:status/brightness
 echo 198 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio198/direction
-echo 0 > /sys/class/gpio/gpio198/value
+echo 1 > /sys/class/gpio/gpio198/value
 
 USB_LIST="$(usb-devices)"
 IS_WLAN="$(echo "$USB_LIST" | grep mt7601u | wc -l)"

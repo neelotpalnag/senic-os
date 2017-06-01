@@ -18,5 +18,5 @@ do_install_append() {
 	install -m 0755 ${WORKDIR}/led_test.sh	${D}${sysconfdir}/init.d/senic_led_test
 	install -m 0755 ${WORKDIR}/esd_test.sh	${D}${sysconfdir}/init.d/senic_esd_test
 
-	update-rc.d -r ${D} senic_esd_test start 99 5 .
+	# update-rc.d -r ${D} senic_esd_test start 99 5 .
 }
