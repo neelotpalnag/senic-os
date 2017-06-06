@@ -5,14 +5,14 @@ require recipes-bsp/u-boot/u-boot.inc
 
 DEPENDS += "dtc-native"
 
-COMPATIBLE_MACHINE = "(nanopi-m1|senic-hub-beta|nanopi-neo|senic-hub)"
+COMPATIBLE_MACHINE = "(senic-hub-beta|senic-hub)"
 
 SRCBRANCH = "senic/v2017.03"
 SRC_URI = "git://git@github.com/getsenic/senic-os-uboot.git;protocol=ssh;branch=${SRCBRANCH}; \
 	   file://boot.cmd \
 	   "
 
-SRCREV = "6c80d208f02ddcc1aa10cc963630e9e79df18a90"
+SRCREV = "2f0e2c9850fb829ba895b5644d89f83a3974d112"
 PV = "v2017.03+git${SRCPV}"
 S = "${WORKDIR}/git"
 
