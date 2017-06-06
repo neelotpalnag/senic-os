@@ -11,4 +11,8 @@ BBLAYERS ?= " \
 	##OEROOT##/../meta-openembedded/meta-oe \
 	##OEROOT##/../meta-openembedded/meta-networking \
 	##OEROOT##/../meta-openembedded/meta-python \
+	##OEROOT##/../oe-meta-go \
+	##OEROOT##/../meta-mender/meta-mender-core \
+	##OEROOT##/../meta-mender/meta-mender-qemu \
+	##OEROOT##/../meta-mender/meta-mender-demo \
 "

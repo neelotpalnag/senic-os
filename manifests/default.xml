@@ -2,10 +2,14 @@
 <manifest>
   <remote name="oe" fetch="git://git.openembedded.org/" />
   <remote name="fe" fetch="ssh://git@tau.free-electrons.com/senic/" />
+  <remote name="go" fetch="git://github.com/mem/" />
+  <remote name="mender" fetch="git://github.com/mendersoftware/" />
 
   <default revision="master" remote="oe" />
 
   <project path="oe" name="openembedded-core" remote="oe" revision="morty" />
   <project path="oe/bitbake" name="bitbake" remote="oe" revision="1.32" />
   <project name="meta-openembedded" remote="oe" revision="morty" />
+  <project name="oe-meta-go" remote="go" revision="master" />
+  <project name="meta-mender" remote="mender" revision="morty" />
 </manifest>
