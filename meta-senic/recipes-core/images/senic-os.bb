@@ -29,3 +29,6 @@ IMAGE_INSTALL = " \
 	python3-dbus \
 	python3-pygobject \
 "
+
+# Custom kernel module to handle Button interrupts
+IMAGE_INSTALL_append = " senic-button"
