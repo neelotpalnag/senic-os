@@ -14,6 +14,7 @@ LIC_FILES_CHKSUM = ""
 
 # No information for SRC_URI yet (only an external source tree was specified)
 SRC_URI = "file://authorized_keys"
+SRC_URI += "file://BleOnboarding"
 
 do_configure () {
 	# Specify any needed configure commands here
@@ -28,9 +29,13 @@ do_compile () {
 do_install () {
     install -d ${D}/${ROOT_HOME}/.ssh -m 0700
     install -m 0600 ${WORKDIR}/authorized_keys ${D}/${ROOT_HOME}/.ssh/
+    # install the debug network connection for the senic office
+    install -d ${D}/${sysconfdir}/NetworkManager/system-connections -m 0700
+    install -m 0600 ${WORKDIR}/BleOnboarding ${D}/${sysconfdir}/NetworkManager/system-connections/BleOnboarding
 }
 
 FILES_${PN} = "\
     ${ROOT_HOME} \
+    ${sysconfdir}/NetworkManager/system-connections/BleOnboarding \
 "
 
