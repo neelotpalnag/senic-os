@@ -12,7 +12,7 @@ SRC_URI = "git://git@github.com/getsenic/senic-os-uboot.git;protocol=ssh;branch=
 	   file://boot.cmd \
 	   "
 
-SRCREV = "2f0e2c9850fb829ba895b5644d89f83a3974d112"
+SRCREV = "3ab7824d6aec9c7d62d258dd5caec551ed2766c9"
 PV = "v2017.03+git${SRCPV}"
 S = "${WORKDIR}/git"
 
