@@ -31,4 +31,4 @@ IMAGE_INSTALL = " \
 "
 
 # Custom kernel module to handle Button interrupts
-IMAGE_INSTALL_append = " senic-button"
+# IMAGE_INSTALL_append = " senic-button"

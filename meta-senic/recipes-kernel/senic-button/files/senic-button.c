@@ -2,6 +2,12 @@
 /*
  * Kernel Driver to handle interrupts of Button on Senic Hub
  *
+ * NOTES: System Restart is implemented by binding GPIOA6 to 
+ * <KEY_RESTART> in the device tree. This module should be implemented
+ * in future to do hard-reset, config-reset and soft-reset based on the
+ * UX requirement. Therefore this module is currently excluded from the
+ * senic-os image.
+ *
  * Author:
  * 	Aravinth Panch <aravinth@senic.com>
  *
