@@ -28,6 +28,7 @@ IMAGE_INSTALL = " \
 	python3 \
 	python3-dbus \
 	python3-pygobject \
+	hub-configuration \
 "
 
 # Custom kernel module to handle Button interrupts
