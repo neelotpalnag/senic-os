@@ -1,3 +1,11 @@
+senicOS -- The Senic Linux distribution
+=======================================
+
+Well, first of all, admittedly "senicOS" is a bit of a mouthful - it's not actually a custom operating system, but simply a `yocto <https://www.yoctoproject.org/>`_ based **linux distribution**.
+
+You can `find the sources on github <https://github.com/getsenic/senic-os>`_.
+
+
 Building senicOS on a remote host
 ---------------------------------
 
@@ -23,9 +31,8 @@ To download the build, run ``make download`` on your local instance, this will (
 Notes on controlling the build host from FreeBSD
 ------------------------------------------------
 
-
 Writing the wic to a USB card reader
-------------------------------------
+************************************
 
 First, make sure to get the the device name of the card reader (usually ``da0``) by running ``camcontrol devlist``.
 
@@ -35,8 +42,7 @@ Once downloaded use ``dd`` but make sure to provide a sufficiently large blocksi
 
 
 Connecting to the serial console
---------------------------------
-
+********************************
 
 Check the device name of the serial adapter by performing a diff between the contents of ``ls -a /dev/`` before and after plugging in the adapter (usually ``ttyU0``), then use screen (either as root or with sudo!)::
 
