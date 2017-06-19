@@ -1,12 +1,12 @@
-senicOS -- The Senic Linux distribution
+SenicOS -- The Senic Linux distribution
 =======================================
 
-Well, first of all, admittedly "senicOS" is a bit of a mouthful - it's not actually a custom operating system, but simply a `yocto <https://www.yoctoproject.org/>`_ based **linux distribution**.
+Well, first of all, admittedly "SenicOS" is a bit of a mouthful - it's not actually a custom operating system, but simply a `yocto <https://www.yoctoproject.org/>`_ based **linux distribution**.
 
 You can `find the sources on github <https://github.com/getsenic/senic-os>`_.
 
 
-Building senicOS on a remote host
+Building SenicOS on a remote host
 ---------------------------------
 
 The ``Makefile`` supports both running locally on a suitable Linux machine that is able to build the OS as well as running the checkout on a non-Linux machine (typically macos or FreeBSD) and control the actual building on a remote host.
@@ -17,7 +17,7 @@ To update the host with local (uncommitted changes) run ``make upload``.
 
 You can then perform a build with these settings on the host like so::
 
-    source oe/oe-init-build-env 
+    source oe/oe-init-build-env
 
 This will use (and create) the default build directory named ``build``, however, you can provide an arbitrary custom name (usually 'your' username) i.e.::
 
