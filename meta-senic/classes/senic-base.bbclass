@@ -32,10 +32,10 @@ def render_template(name, context=None, outfile=None):
         outfile_f.write(template.render(**context))
 
 
-def get_senic_settings(d):
+def get_senic_settings(d, prefix='SNC_'):
     result = dict()
     for key in d.keys():
-      if key.startswith('SNC'):
+      if key.startswith(prefix):
         result[key] = (d.getVar(key, True))
     return result
 
