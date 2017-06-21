@@ -11,6 +11,16 @@ python () {
 
 
 def render_template(name, context=None, outfile=None):
+    """ Renders the given Jinja template with the given context
+    to the given output file.
+    By default the context consists of all variables defined in local.conf
+    that begin with `SNC_`.
+    If no outputfile is given, the template is overwritten with the rendered
+    version. This can be useful since mostly the template has already bee copied
+    by bitbake into the working directory.
+    The usual pattern is then to perform the rendering inside `do_compile` and then
+    `do_install` simply moves them to the desired final location."""
+
     template = jinja_env.get_template(name)
     # default is to overwrite the template
     # with the rendered version in-place
