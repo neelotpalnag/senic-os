@@ -28,11 +28,9 @@ def debug(value):
         outfile_f.write(json.dumps(value))
 
 def get_senic_settings(d):
-  result = dict()
-  for key in d.keys():
-    if key.startswith('SNC'):
-      result[key] = (d.getVar(key, True))
-  return result
-  
-
+    result = dict()
+    for key in d.keys():
+      if key.startswith('SNC'):
+        result[key] = (d.getVar(key, True))
+    return result
 
