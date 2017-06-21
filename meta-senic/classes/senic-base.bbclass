@@ -22,11 +22,6 @@ def render_template(name, context=None, outfile=None):
         outfile_f.write(template.render(**context))
 
 
-def debug(value):
-    import json
-    with open('/tmp/debugx', 'w') as outfile_f:
-        outfile_f.write(json.dumps(value))
-
 def get_senic_settings(d):
     result = dict()
     for key in d.keys():
