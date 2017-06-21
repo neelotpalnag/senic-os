@@ -11,7 +11,7 @@ inherit senic-base
 
 
 python do_compile() {
-  render_template('${WORKDIR}/senic_hub.conf')
+  render_template('senic_hub.conf')
 }
 
 

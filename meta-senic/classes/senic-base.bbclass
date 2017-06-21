@@ -4,22 +4,23 @@ python () {
     senic_settings = get_senic_settings(d)
     global datastore
     datastore = d
+    from jinja2 import Environment, FileSystemLoader
+    global jinja_env
+    jinja_env = Environment(loader=FileSystemLoader(d.expand('${WORKDIR}')))
 }
 
 
-def render_template(infile, context=None, outfile=None):
-    infile = datastore.expand(infile)
-    template = u''
+def render_template(name, context=None, outfile=None):
+    template = jinja_env.get_template(name)
     # default is to overwrite the template
     # with the rendered version in-place
     if outfile is None:
-        outfile = infile
+        outfile = template.filename
     if context is None:
         context = senic_settings
-    with open(infile, 'r') as infile_f:
-        template = ''.join(infile_f.readlines())
     with open(outfile, 'w') as outfile_f:
-        outfile_f.write(template.format(**context))
+        outfile_f.write(template.render(**context))
+
 
 def debug(value):
     import json
