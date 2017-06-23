@@ -28,6 +28,39 @@ and then perform a separate build in your own environment.
 To download the build, run ``make download`` on your local instance, this will (r)sync the server's build directory to the local build directory (in essence as if you had run the build command locally) at ``build/tmp-glibc/deploy/images/senic-hub-beta/``.
 
 
+Notes on flashing the image and provisioning COVI/Hub from MacOS
+----------------------------------------------------------------
+
+Writing the .wic image to an SD card
+************************************
+
+
+Depending on the device name and date of the SenicOS image, you can use the following commands to unzip and flash the image to an SD card::
+
+    diskutil unmountDisk /dev/disk3
+    bunzip2 ./build/tmp-glibc/deploy/images/senic-hub-beta/senic-os-dev-senic-hub-beta-20170621141301.rootfs.wic.bz2
+    sudo dd if=build/tmp-glibc/deploy/images/senic-hub-beta/senic-os-dev-senic-hub-beta-20170621141301.rootfs.wic of=/dev/rdisk3 bs=1024k
+    diskutil unmountDisk /dev/disk3
+
+Manually performing provisioning steps that will be automated soon
+******************************************************************
+
+Connect via TTY (i.e. ``screen /dev/tty.usbserial 115200``) and then run::
+
+    nmcli dev wifi con <SSID> password <PASSWORD> ifname wlan0
+    ifconfig
+
+Update section `ploy.conf` in `senic-hub` with::
+
+    [plain-instance:beta]
+    ....
+    ip = <HUB's IP ADDRESS>
+
+Now from `senic-hub/deployment` run::
+
+    `bin/ploy configure beta`
+
+
 Notes on controlling the build host from FreeBSD
 ------------------------------------------------
 
