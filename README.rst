@@ -68,6 +68,13 @@ Now from `senic-hub/deployment` run::
 
     `bin/ploy configure beta`
 
+If we want to put the hub into delivery state, we want to stop all daemons, delete all logs and unprovision Wi-Fi::
+
+    supervisorctl stop all
+    rm /srv/senic_hub/data/*
+    nmcli con
+    nmcli con del <CONNECTION NAME FROM PREVIOUS STEP>
+
 
 Notes on controlling the build host from FreeBSD
 ------------------------------------------------
