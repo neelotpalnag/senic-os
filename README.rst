@@ -31,6 +31,14 @@ To download the build, run ``make download`` on your local instance, this will (
 Notes on flashing the image and provisioning COVI/Hub from MacOS
 ----------------------------------------------------------------
 
+Downloading the last .wic image
+*******************************
+
+From the root folder of this repository run::
+
+    make download
+
+
 Writing the .wic image to an SD card
 ************************************
 
