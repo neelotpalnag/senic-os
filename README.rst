@@ -50,7 +50,7 @@ Connect via TTY (i.e. ``screen /dev/tty.usbserial 115200``) and then run::
     nmcli dev wifi con <SSID> password <PASSWORD> ifname wlan0
     ifconfig
 
-Update section `ploy.conf` in `senic-hub` with::
+Update section `plain-instance:beta` of `senic-hub/deployment/etc/ploy.conf` with::
 
     [plain-instance:beta]
     ....
