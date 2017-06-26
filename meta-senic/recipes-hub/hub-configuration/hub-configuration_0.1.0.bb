@@ -1,11 +1,15 @@
 SUMMARY = "Configure the senic hub"
 DESCRIPTION = "\
 Creates various configuration files"
-DEPENDS = "python-supervisor"
+DEPENDS_${PN} = "\
+  python-supervisor \
+  bluez5 \
+"
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 SRC_URI = "file://senic_hub.conf"
 SRC_URI += "file://production.ini"
 SRC_URI += "file://locales.sh"
+SRC_URI += "file://bluetooth.conf"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE.txt;md5=62d64e0a0688cba2e9ede69d1f702e1c"
 
@@ -13,10 +17,13 @@ inherit senic-base
 inherit logging
 inherit useradd
 
+do_configure[deptask] = "do_install"
+
 python do_compile() {
   render_template('senic_hub.conf')
   render_template('production.ini')
   render_template('locales.sh')
+  render_template('bluetooth.conf')
 }
 
 USERADD_PACKAGES = "${PN}"
@@ -36,6 +43,9 @@ do_install() {
     # global system configuration
     install -m 0755 -d ${D}${sysconfdir}/profile.d/
     install -m 644 ${WORKDIR}/locales.sh ${D}${sysconfdir}/profile.d/locales.sh
+    install -m 0755 -d ${D}${sysconfdir}/dbus-1/system.d
+    install -m 644 ${WORKDIR}/bluetooth.conf ${D}${sysconfdir}/dbus-1/system.d/bluetooth.conf
+
 }
 
 FILES_${PN} = "\
@@ -44,4 +54,5 @@ FILES_${PN} = "\
     ${SNC_HASS_DATA_LOCATION} \
     ${sysconfdir}/supervisor/conf.d/senic_hub.conf \
     ${sysconfdir}/profile.d/locales.sh \
+    ${sysconfdir}/dbus-1/system.d/bluetooth.conf \
 "
