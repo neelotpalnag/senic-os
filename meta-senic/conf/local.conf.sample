@@ -218,8 +218,8 @@ CONF_VERSION = "1"
 # hub specific variables
 #
 
-SNC_BUILD_USER = "senic"
-SNC_RUNTIME_USER = "nuimo"
+SNC_BUILD_USER = "root"
+SNC_RUNTIME_USER = "senic"
 SNC_LOCALE = "en_US.UTF-8"
 
 SNC_BACKEND_DEPLOY_LOCATION = "/srv/senic_hub"

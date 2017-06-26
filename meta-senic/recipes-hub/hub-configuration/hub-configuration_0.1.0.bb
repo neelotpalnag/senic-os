@@ -10,11 +10,15 @@ LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE.txt;md5=62d64e0a0688cba2e9ede69d1f
 
 inherit senic-base
 inherit logging
+inherit useradd
 
 python do_compile() {
   render_template('senic_hub.conf')
   render_template('production.ini')
 }
+
+USERADD_PACKAGES = "${PN}"
+USERADD_PARAM_${PN} = "-U -d ${SNC_BACKEND_DEPLOY_LOCATION} ${SNC_RUNTIME_USER}"
 
 
 do_install() {
