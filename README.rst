@@ -42,3 +42,11 @@ Check the device name of the serial adapter by performing a diff between the con
 
     sudo screen /dev/ttyU0 115200 -L
 
+
+
+Debugging
+---------
+
+Run ``bitbake senic-os-dev`` to trigger a build.
+Then you can check ``tmp-glibc/work/senic_hub_beta-oe-linux-gnueabi/senic-os-dev/1.0-r0/rootfs/`` and inspect what the filesystem looks like.
+In many cases this is enough and you can save yourself the trouble of writing the image to disk and physically boot into it.
