@@ -6,7 +6,7 @@ DEPENDS_${PN} = "\
   bluez5 \
 "
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
-SRC_URI = "file://senic_hub.conf"
+SRC_URI = "file://supervisor_senic_hub.conf"
 SRC_URI += "file://production.ini"
 SRC_URI += "file://locales.sh"
 SRC_URI += "file://bluetooth.conf"
@@ -20,7 +20,7 @@ inherit useradd
 do_configure[deptask] = "do_install"
 
 python do_compile() {
-  render_template('senic_hub.conf')
+  render_template('supervisor_senic_hub.conf')
   render_template('production.ini')
   render_template('locales.sh')
   render_template('bluetooth.conf')
@@ -39,7 +39,7 @@ do_install() {
     install -m 0755 -d ${D}${SNC_HASS_DATA_LOCATION}
     # configure supervisor processes
     install -m 0755 -d ${D}${sysconfdir}/supervisor/conf.d/
-    install -m 0755 ${WORKDIR}/senic_hub.conf ${D}${sysconfdir}/supervisor/conf.d/senic_hub.conf
+    install -m 0755 ${WORKDIR}/supervisor_senic_hub.conf ${D}${sysconfdir}/supervisor/conf.d/senic_hub.conf
     # global system configuration
     install -m 0755 -d ${D}${sysconfdir}/profile.d/
     install -m 644 ${WORKDIR}/locales.sh ${D}${sysconfdir}/profile.d/locales.sh
