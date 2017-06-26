@@ -3,5 +3,10 @@ bin/
 meta-openembedded/
 oe/
 build/
+/shantanu/
+/debug/
 *.swp
-
+*.swo
+bitbake.lock
+/shared/
+/tmp/
