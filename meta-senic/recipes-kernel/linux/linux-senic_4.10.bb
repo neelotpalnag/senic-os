@@ -12,7 +12,7 @@ require recipes-kernel/linux/linux-dtb.inc
 RDEPENDS_kernel-base=""
 
 KBRANCH = "senic/4.10"
-SRCREV = "29e3e56b4a7438ef0002d79e82b8cbb280b46451"
+SRCREV = "43be15e4e16d6b2162a5b13e8633e23720ee9f5b"
 
 PV = "4.10+git${SRCPV}"
 S = "${WORKDIR}/git"
