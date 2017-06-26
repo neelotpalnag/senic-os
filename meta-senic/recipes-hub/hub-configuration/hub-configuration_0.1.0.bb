@@ -7,8 +7,9 @@ DEPENDS_${PN} = "\
 "
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
 SRC_URI = "file://supervisor_senic_hub.conf"
-SRC_URI = "file://supervisor_bluenet.conf"
-SRC_URI = "file://supervisor_device_discovery.conf"
+SRC_URI += "file://supervisor_bluenet.conf"
+SRC_URI += "file://supervisor_nuimo_app.conf"
+SRC_URI += "file://supervisor_device_discovery.conf"
 SRC_URI += "file://production.ini"
 SRC_URI += "file://locales.sh"
 LICENSE = "BSD"
@@ -23,6 +24,7 @@ do_configure[deptask] = "do_install"
 python do_compile() {
   render_template('supervisor_senic_hub.conf')
   render_template('supervisor_bluenet.conf')
+  render_template('supervisor_nuimo_app.conf')
   render_template('supervisor_device_discovery.conf')
   render_template('production.ini')
   render_template('locales.sh')
@@ -44,6 +46,7 @@ do_install() {
     install -m 0755 -d ${D}${sysconfdir}/supervisor/conf.d/
     install -m 0755 ${WORKDIR}/supervisor_senic_hub.conf ${D}${sysconfdir}/supervisor/conf.d/senic_hub.conf
     install -m 0755 ${WORKDIR}/supervisor_bluenet.conf ${D}${sysconfdir}/supervisor/conf.d/bluenet.conf
+    install -m 0755 ${WORKDIR}/supervisor_nuimo_app.conf ${D}${sysconfdir}/supervisor/conf.d/nuimo_app.conf
     install -m 0755 ${WORKDIR}/supervisor_device_discovery.conf ${D}${sysconfdir}/supervisor/conf.d/device_discovery.conf
 
     # global system configuration
@@ -58,6 +61,7 @@ FILES_${PN} = "\
     ${SNC_HASS_DATA_LOCATION} \
     ${sysconfdir}/supervisor/conf.d/senic_hub.conf \
     ${sysconfdir}/supervisor/conf.d/bluenet.conf \
+    ${sysconfdir}/supervisor/conf.d/nuimo_app.conf \
     ${sysconfdir}/supervisor/conf.d/device_discovery.conf \
     ${sysconfdir}/profile.d/locales.sh \
 "
