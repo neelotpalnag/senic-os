@@ -43,3 +43,16 @@ NOINST_TOOLS_EXPERIMENTAL ?= " \
     tools/btgatt-server \
     tools/gatt-service \
 "
+
+inherit senic-base
+SRC_URI += "file://bluetooth.conf"
+python do_render_templates() {
+  render_template('bluetooth.conf')
+}
+addtask render_templates after do_compile before do_install
+
+do_install_append() {
+    install -m 644 ${WORKDIR}/bluetooth.conf ${D}${sysconfdir}/dbus-1/system.d/bluetooth.conf
+}
+
+do_render_templates[nostamp] = "1"
