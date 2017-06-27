@@ -23,6 +23,13 @@ IMAGE_INSTALL = " \
 	python-supervisor \
 	python3-netifaces \
 	python3-multiprocessing \
+    python3-chardet \
+    python3-cffi \
+    python3-click \
+    python3-idna \
+    python3-requests \
+    python3-six \
+    python3-urllib3 \
 	python3-cffi \
 	python3-cryptography \
 	python3 \
