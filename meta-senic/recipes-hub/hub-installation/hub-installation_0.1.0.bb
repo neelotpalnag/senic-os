@@ -4,6 +4,8 @@ Creates a virtualenv and install the required python eggs"
 DEPENDS_${PN} = "\
   python3-pip \
   python3 \
+  python3-netifaces \
+  python3-multiprocessing \
   python3-cffi \
   python3-click \
   python3-cryptography \
