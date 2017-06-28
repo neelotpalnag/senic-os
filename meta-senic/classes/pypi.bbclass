@@ -15,9 +15,11 @@ def pypi_src_uri(d):
     package_ext = d.getVar('PYPI_PACKAGE_EXT', True)
     package_base_url = d.getVar('SNC_DEVPI_BASE_URL', True)
     package_index = d.getVar('SNC_DEVPI_INDEX', True)
-    package_md5sum = d.getVarFlag('SRC_URI', 'md5sum', True)
+    package_checksum = d.getVarFlag('SRC_URI', 'md5sum', True)
+    if package_checksum is None:
+      package_checksum = d.getVarFlag('SRC_URI', 'sha256sum', True)
     pv = d.getVar('PV', True)
-    return '%s%s/+f/%s/%s/%s-%s.%s' % (package_base_url, package_index, package_md5sum[:3], package_md5sum[3:16], package, pv, package_ext)
+    return '%s%s/+f/%s/%s/%s-%s.%s' % (package_base_url, package_index, package_checksum[:3], package_checksum[3:16], package, pv, package_ext)
 
 PYPI_SRC_URI ?= "${@pypi_src_uri(d)}"
 
