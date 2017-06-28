@@ -30,6 +30,7 @@ IMAGE_INSTALL = " \
     python3-cffi \
     python3-click \
     python3-idna \
+    python3-pyyaml \
     python3-requests \
     python3-six \
     python3-urllib3 \
