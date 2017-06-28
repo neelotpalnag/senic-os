@@ -21,6 +21,7 @@ IMAGE_INSTALL = " \
 	ntp \
 	python \
 	python-supervisor \
+	python3-asn1crypto \
 	python3-netifaces \
 	python3-multiprocessing \
     python3-chardet \
