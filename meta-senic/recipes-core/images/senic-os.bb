@@ -36,6 +36,7 @@ IMAGE_INSTALL = " \
 	python3-cffi \
 	python3-cryptography \
 	python3-venusian \
+	python3-webob \
 	python3-websocket-client \
 	python3-xmltodict \
 	python3-zeroconf \
