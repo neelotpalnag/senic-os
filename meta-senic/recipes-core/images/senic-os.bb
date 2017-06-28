@@ -46,6 +46,28 @@ IMAGE_INSTALL = " \
 	python3 \
 	python3-dbus \
 	python3-pygobject \
+    python3-contextlib2 \
+    python3-cornice \
+    python3-cryptoyaml \
+    python3-gatt \
+    python3-hupper \
+    python3-iso8601 \
+    python3-lightify \
+    python3-netdisco \
+    python3-nuimo \
+    python3-pastedeploy \
+    python3-phue \
+    python3-plaster \
+    python3-pyramid-tm \
+    python3-pyramid \
+    python3-pytz \
+    python3-raven \
+    python3-repoze.lru \
+    python3-senic-hub \
+    python3-simplejson \
+    python3-soco \
+    python3-transaction \
+    python3-waitress \
 	hub-configuration \
 "
 
