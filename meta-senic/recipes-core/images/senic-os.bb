@@ -22,6 +22,7 @@ IMAGE_INSTALL = " \
 	python \
 	python-supervisor \
 	python3-asn1crypto \
+	python3-translationstring \
 	python3-netifaces \
 	python3-multiprocessing \
     python3-chardet \
