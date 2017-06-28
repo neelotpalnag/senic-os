@@ -49,12 +49,3 @@ IMAGE_INSTALL = " \
 # Custom kernel module to handle Button interrupts
 # IMAGE_INSTALL_append = " senic-button"
 
-# create users
-inherit extrausers
-EXTRA_USERS_PARAMS = "\
-  groupadd ${SNC_RUNTIME_USER}; \
-  groupadd ${SNC_BUILD_USER}; \
-  useradd -u 1000 -g ${SNC_BUILD_USER} -G ${SNC_RUNTIME_USER} -d /home/${SNC_BUILD_USER} ${SNC_BUILD_USER}; \
-  useradd -u 1001 -g ${SNC_RUNTIME_USER} -d ${SNC_BACKEND_DEPLOY_LOCATION} ${SNC_RUNTIME_USER}; \
-  "
-
