@@ -3,7 +3,7 @@ HOMEPAGE = "https://github.com/getsenic/senic.cryptoyaml"
 LICENSE = "BSD-2-Clause"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=fd254597258a2e2af990cc804b8fe7f3"
 
-inherit setuptools
+inherit setuptools3
 inherit pypi
 
 PYPI_PACKAGE_EXT = "zip"

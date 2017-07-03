@@ -10,7 +10,7 @@ PYPI_PACKAGE = "PyYAML"
 SRC_URI[md5sum] = "4c129761b661d181ebf7ff4eb2d79950"
 
 
-inherit distutils
+inherit distutils3
 inherit pypi
 
 BBCLASSEXTEND = "native"

@@ -3,3 +3,4 @@ HOMEPAGE = "http://pylonsproject.org"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://${THISDIR}/licenses/REPOZE_LICENSE.txt;md5=2513261c6e403f9e6fd2ae3ce8f2c710"
 SRC_URI[md5sum] = "56bc5e6756e4bda37bcdb94f74a72b8f"
+inherit pypi setuptools3

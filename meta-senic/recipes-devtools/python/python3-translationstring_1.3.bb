@@ -9,6 +9,6 @@ SRC_URI[md5sum] = "a4b62e0f3c189c783a1685b3027f7c90"
 PV = "1.3"
 
 
-inherit setuptools
+inherit setuptools3
 inherit pypi
 

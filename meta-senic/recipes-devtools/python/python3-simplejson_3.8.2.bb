@@ -8,6 +8,6 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=c6338d7abd321c0b50a2a547e441c52e"
 SRCNAME = "simplejson"
 SRC_URI[md5sum] = "53b1371bbf883b129a12d594a97e9a18"
 
-inherit setuptools
+inherit setuptools3
 inherit pypi
 

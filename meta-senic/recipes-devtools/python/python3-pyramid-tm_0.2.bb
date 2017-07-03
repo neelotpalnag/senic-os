@@ -2,7 +2,8 @@ SUMMARY = "A package which allows Pyramid requests to join the active transactio
 HOMEPAGE = "http://docs.pylonsproject.org/projects/pyramid-tm/en/latest/"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://${THISDIR}/licenses/REPOZE_LICENSE.txt;md5=2513261c6e403f9e6fd2ae3ce8f2c710"
-PYPI_PACKAGE = "pyramid-tm"
+PYPI_PACKAGE = "pyramid_tm"
 
-SRC_URI[md5sum] = "0fc90fe117e446c2ba304b646045c531"
+SRC_URI[md5sum] = "4f110a70bc5162bb2d2b1242349d06af"
 
+inherit pypi setuptools3
