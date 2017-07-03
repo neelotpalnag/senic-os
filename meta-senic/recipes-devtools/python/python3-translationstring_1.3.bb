@@ -12,4 +12,3 @@ PV = "1.3"
 inherit setuptools
 inherit pypi
 
-RDEPENDS_${PN} += "python-codecs python-core python-lang python-re python-unittest"
