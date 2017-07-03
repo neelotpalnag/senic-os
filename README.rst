@@ -31,6 +31,18 @@ To download the build, run ``make download`` on your local instance, this will (
 Notes on flashing the image and provisioning COVI/Hub from MacOS
 ----------------------------------------------------------------
 
+Specify host in your ssh config
+*******************************
+
+As a single time setup, please add the following SSH configuration to your `~/.ssh/config` file::
+
+    Host osbuild
+        Hostname osbuild.senic.com
+        ForwardAgent yes
+        User senic
+
+Please note that only users who have their publick SSH keys shared with us can access the build server.
+
 Downloading the last .wic image
 *******************************
 
