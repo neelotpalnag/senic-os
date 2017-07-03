@@ -11,7 +11,6 @@ IMAGE_INSTALL = " \
 	packagegroup-core-boot \
 	packagegroup-base \	
 	packagegroup-core-ssh-openssh \
-	ifupdown \
 	openssl \
 	lighttpd \
 	os-release \
