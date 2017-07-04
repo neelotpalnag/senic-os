@@ -16,6 +16,7 @@ PYPI_PACKAGE = "senic_hub"
 # version specific info, change this for new releases
 PV = "0.2.1+fd291a7"
 SRC_URI[sha256sum] = "a14662e0cdb3b0f2c0ae4c057257526bb925f2a9c3cc38128dff0891c7e7da26"
+PYPI_SRC_URI = "https://pypi.senic.com/tomster/master/+f/a14/662e0cdb3b0f2/senic_hub-0.2.1+fd291a7.tar.gz"
 
 
 do_install_append() {
