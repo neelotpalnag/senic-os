@@ -14,6 +14,7 @@ DEPENDS_${PN} = "\
   python3-colander \
   python3-cffi \
   python3-click \
+  python3-enum-compat \
   python3-idna \
   python3-pyyaml \
   python3-requests \
