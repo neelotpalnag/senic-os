@@ -6,23 +6,23 @@ inherit core-image
 IMAGE_BOOT_FILES = "zImage zImage-${KERNEL_DEVICETREE} boot.scr"
 
 IMAGE_INSTALL = " \
-	${@bb.utils.contains("DISTRO_FEATURES", "bluetooth", "bluez5-noinst-tools", "", d)} \
-	${@bb.utils.contains("DISTRO_FEATURES", "wifi", "linux-firmware-mediatek", "",d)} \	
-	packagegroup-core-boot \
-	packagegroup-base \	
-	packagegroup-core-ssh-openssh \
-	ifupdown \
-	openssl \
-	lighttpd \
-	os-release \
-	glibc-locale \
-	glibc-utils \ 
-	networkmanager \
-	ntp \
-	python \
-	python-supervisor \
-	hub-configuration \
-	hub-installation \
+  ${@bb.utils.contains("DISTRO_FEATURES", "bluetooth", "bluez5-noinst-tools", "", d)} \
+  ${@bb.utils.contains("DISTRO_FEATURES", "wifi", "linux-firmware-mediatek", "",d)} \	
+  packagegroup-core-boot \
+  packagegroup-base \	
+  packagegroup-core-ssh-openssh \
+  ifupdown \
+  openssl \
+  lighttpd \
+  os-release \
+  glibc-locale \
+  glibc-utils \ 
+  networkmanager \
+  ntp \
+  python \
+  python-supervisor \
+  hub-configuration \
+  hub-installation \
 "
 
 # Custom kernel module to handle Button interrupts
