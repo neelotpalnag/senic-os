@@ -12,6 +12,7 @@ SRC_URI += "file://supervisor_nuimo_app.conf"
 SRC_URI += "file://supervisor_device_discovery.conf"
 SRC_URI += "file://production.ini"
 SRC_URI += "file://locales.sh"
+SRC_URI += "file://LICENSE.txt"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE.txt;md5=62d64e0a0688cba2e9ede69d1f702e1c"
 

@@ -18,20 +18,19 @@ DEPENDS_${PN} = "\
   python3-gatt \
   python3-hupper \
   python3-idna \
-  python3-idna \
   python3-iso8601 \
   python3-lightify \
   python3-multiprocessing \
   python3-netdisco \
   python3-netifaces \
-  python3-networkmanager \
+  python3-python-networkmanager \
   python3-nuimo \
   python3-pastedeploy \
   python3-phue \
   python3-pip \
   python3-plaster \
   python3-pygobject \
-  python3-pygobject \
+  python3-pydoc \
   python3-pyramid \
   python3-pyramid-tm \
   python3-pytz \
