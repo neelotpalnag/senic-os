@@ -2,7 +2,7 @@ SUMMARY = "Configure the senic hub"
 DESCRIPTION = "\
 Creates various configuration files"
 DEPENDS_${PN} = "\
-  python-supervisor \
+  hub-installation \
   bluez5 \
 "
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
