@@ -24,6 +24,7 @@ DEPENDS_${PN} = "\
   python3-multiprocessing \
   python3-netdisco \
   python3-netifaces \
+  python3-networkmanager \
   python3-nuimo \
   python3-pastedeploy \
   python3-phue \
