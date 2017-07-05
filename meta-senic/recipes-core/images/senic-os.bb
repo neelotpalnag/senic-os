@@ -21,6 +21,8 @@ IMAGE_INSTALL = " \
   ntp \
   python \
   python-supervisor \
+  python3-cffi \
+  python3-pydoc \
   hub-configuration \
   hub-installation \
 "

@@ -9,6 +9,8 @@ DEPENDS_${PN} = "\
   python3-cffi \
   python3-click \
   python3-cryptography \
+  python3-cffi \
+  python3-pydoc \
   python3-dbus \
   python3-pygobject \
   python3-idna \
