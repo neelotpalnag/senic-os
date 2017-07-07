@@ -1,0 +1,21 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides: fs_expander
+# Required-Start:
+# Required-Stop:
+# Default-Start:
+# Default-Stop:
+# Short-Description: Expand root fs to use all available space on the SD card
+### END INIT INFO
+
+echo -e "Expanding root fs..."
+
+echo "Running: parted -s /dev/mmcblk0 resizepart 2 3922MB"
+/usr/sbin/parted -s /dev/mmcblk0 resizepart 2 3922MB
+
+echo "Running: resize2fs -p /dev/mmcblk0p2"
+/sbin/resize2fs -p /dev/mmcblk0p2
+
+# The fs expansion has to be run only once
+echo "Disabling fs_expander script"
+/usr/sbin/update-rc.d -f fs_expander remove

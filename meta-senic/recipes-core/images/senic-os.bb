@@ -25,6 +25,8 @@ IMAGE_INSTALL = " \
   python3-pydoc \
   hub-configuration \
   hub-installation \
+  e2fsprogs-resize2fs \
+  parted \
 "
 
 # Custom kernel module to handle Button interrupts
