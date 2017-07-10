@@ -5,7 +5,6 @@ oe/README:  .repo/manifest.xml
 
 sync:  .repo/manifest.xml
 	./bin/repo sync -j3
-	git pull
 
 .repo/manifest.xml: bin/repo
 	./bin/repo init -u . -m manifests/default.xml
