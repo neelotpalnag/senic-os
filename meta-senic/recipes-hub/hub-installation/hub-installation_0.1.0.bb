@@ -23,21 +23,21 @@ DEPENDS_${PN} = "\
   python3-multiprocessing \
   python3-netdisco \
   python3-netifaces \
-  python3-python-networkmanager \
   python3-nuimo \
   python3-pastedeploy \
   python3-phue \
   python3-pip \
+  python3-pip \
   python3-plaster \
-  python3-pygobject \
   python3-pydoc \
+  python3-pygobject \
   python3-pyramid \
   python3-pyramid-tm \
+  python3-python-networkmanager \
   python3-pytz \
   python3-pyyaml \
   python3-raven \
   python3-repoze-lru \
-  python3-requests \
   python3-requests \
   python3-senic-hub \
   python3-simplejson \

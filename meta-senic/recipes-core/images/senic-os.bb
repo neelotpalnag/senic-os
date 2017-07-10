@@ -72,6 +72,8 @@ IMAGE_INSTALL = " \
   python3-zope.deprecation \
   python3-zope.interface \
   hub-configuration \
+  hub-configuration \
+  hub-installation \
 "
 
 # Custom kernel module to handle Button interrupts
