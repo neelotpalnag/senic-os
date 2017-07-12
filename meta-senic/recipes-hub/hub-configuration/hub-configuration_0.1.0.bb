@@ -14,6 +14,7 @@ SRC_URI += "file://supervisor_device_discovery.conf"
 SRC_URI += "file://production.ini"
 SRC_URI += "file://locales.sh"
 SRC_URI += "file://LICENSE.txt"
+SRC_URI += "file://ntp.conf"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE.txt;md5=62d64e0a0688cba2e9ede69d1f702e1c"
 
@@ -56,6 +57,7 @@ do_install() {
     # global system configuration
     install -m 0755 -d ${D}${sysconfdir}/profile.d/
     install -m 644 ${WORKDIR}/locales.sh ${D}${sysconfdir}/profile.d/locales.sh
+    install -m 644 ${WORKDIR}/ntp.conf ${D}${sysconfdir}/ntp.conf
 
 }
 
@@ -69,4 +71,5 @@ FILES_${PN} = "\
     ${sysconfdir}/supervisor/conf.d/nuimo_app.conf \
     ${sysconfdir}/supervisor/conf.d/device_discovery.conf \
     ${sysconfdir}/profile.d/locales.sh \
+    ${sysconfdir}/ntp.conf \
 "
