@@ -64,6 +64,7 @@ FILES_${PN} = "\
     ${SNC_BACKEND_DEPLOY_LOCATION} \
     ${SNC_HASS_DATA_LOCATION} \
     ${sysconfdir}/supervisor/conf.d/senic_hub.conf \
+    ${sysconfdir}/supervisor/conf.d/bluenet.conf \
     ${sysconfdir}/supervisor/conf.d/netwatch.conf \
     ${sysconfdir}/supervisor/conf.d/nuimo_app.conf \
     ${sysconfdir}/supervisor/conf.d/device_discovery.conf \
