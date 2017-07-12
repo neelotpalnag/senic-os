@@ -25,6 +25,7 @@ DEPENDS_${PN} = "\
   python3-netifaces \
   python3-nuimo \
   python3-pastedeploy \
+  python3-pbkdf2 \
   python3-phue \
   python3-pip \
   python3-pip \
