@@ -1,6 +1,6 @@
 SUMMARY = "WebSocket client for python. hybi13 is supported."
 HOMEPAGE = "https://github.com/websocket-client/websocket-client.git"
-LICENSE = "LGPL"
+LICENSE = "LGPL-2.1"
 LIC_FILES_CHKSUM = "file://LICENSE;md5=18b09a20dd186af4fd60f1a08311628c"
 PYPI_PACKAGE = "websocket_client"
 
