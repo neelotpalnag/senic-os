@@ -42,7 +42,7 @@ do_install() {
     install -m 0755 -o ${SNC_BUILD_USER} -g ${SNC_RUNTIME_USER} -d ${D}${SNC_BACKEND_DEPLOY_LOCATION}
     install -m 0755 -o ${SNC_RUNTIME_USER} -g ${SNC_RUNTIME_USER} -d ${D}${SNC_BACKEND_DATA_LOCATION}
     install -m 0755 -o ${SNC_RUNTIME_USER} -g ${SNC_RUNTIME_USER} -d ${D}${SNC_BACKEND_DATA_LOCATION}/logs
-    install -m 0755 -o ${SNC_BUILD_USER} -g ${SNC_RUNTIME_USER} ${WORKDIR}/production.ini ${D}${SNC_BACKEND_DATA_LOCATION}/production.ini
+    install -m 0755 -o ${SNC_BUILD_USER} -g ${SNC_RUNTIME_USER} ${WORKDIR}/production.ini ${D}${SNC_BACKEND_LOCATION}/production.ini
     install -m 0755 -d ${D}${SNC_HASS_DATA_LOCATION}
 
     # configure supervisor processes
