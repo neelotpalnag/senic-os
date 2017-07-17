@@ -15,11 +15,13 @@ DEPENDS_${PN} = "\
   python3-cryptoyaml \
   python3-dbus \
   python3-enum-compat \
+  python3-fasteners \
   python3-gatt \
   python3-hupper \
   python3-idna \
   python3-iso8601 \
   python3-lightify \
+  python3-monotonic \
   python3-multiprocessing \
   python3-netdisco \
   python3-netifaces \
