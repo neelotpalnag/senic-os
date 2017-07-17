@@ -15,9 +15,8 @@ SNC_DEVPI_INDEX = "tomster/master"
 PYPI_PACKAGE = "senic_hub"
 # version specific info, change this for new releases
 PV = "0.2.58+ebcc65a"
-SRC_URI[sha256sum] = "74c20a7e2fcb4e9c24e18de409cc6736d5551ef6bfe5ba67c164380f02bafd6a"
-PYPI_SRC_URI = "https://pypi.senic.com/getsenic/master/+f/74c/20a7e2fcb4e9c/senic_hub-0.2.58+ebcc65a.tar.gz"
-
+SRC_URI[sha256sum] = "5357570f177fe5c12626028d15aa8f62eb4b69688d650f3ace72a2a335541b07"
+PYPI_SRC_URI = "https://pypi.senic.com/getsenic/master/+f/535/7570f177fe5c1/senic_hub-0.2.60+71ebd3d.tar.gz"
 
 do_install_append() {
   # remove static docs
