@@ -3,6 +3,7 @@ DESCRIPTION = "\
 Creates a virtualenv and install the required python eggs"
 DEPENDS_${PN} = "\
   python-supervisor \
+  python-daemonize \
   python3 \
   python3-asn1crypto \
   python3-cffi \
