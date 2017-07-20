@@ -51,9 +51,7 @@ def on_long_press(press_duration):
     daemon.logger.info(
             "Reset button held for %0.2f seconds: FACTORY RESET" %
             press_duration)
-    execute_and_log('/etc/init.d/supervisor stop')
     execute_and_log('/usr/bin/nmcli connection del bluenet')
-    execute_and_log('/sbin/reboot')
     exit()
 
 
