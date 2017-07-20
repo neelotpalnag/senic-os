@@ -44,7 +44,6 @@ def on_short_press(press_duration):
             "Reset button held for %0.2f seconds: REBOOT" %
             press_duration)
     execute_and_log('/sbin/reboot')
-    exit()
 
 
 def on_long_press(press_duration):
@@ -52,7 +51,6 @@ def on_long_press(press_duration):
             "Reset button held for %0.2f seconds: FACTORY RESET" %
             press_duration)
     execute_and_log('/usr/bin/nmcli connection del bluenet')
-    exit()
 
 
 def listen_for_button_presses():
