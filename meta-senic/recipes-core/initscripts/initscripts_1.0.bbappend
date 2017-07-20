@@ -20,6 +20,9 @@ do_install_append() {
   update-rc.d -r ${D} senic_update_motd start 98 5 .
   update-rc.d -r ${D} networkmanager start 91 5 .
 
+  # Add filesystem expander script to runlevel S after root fs is mounted rw
+  update-rc.d -r ${D} fs_expander start 99 S .
+
   # Add button listener daemon after logging has been started
   update-rc.d -r ${D} senic_button start 22 5 .
 
