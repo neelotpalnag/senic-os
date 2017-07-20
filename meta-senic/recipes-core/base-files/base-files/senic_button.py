@@ -9,9 +9,6 @@ import os
 LOG_NAME = 'senic_button'
 DAEMON_PID = '/var/run/senic_button.pid'
 
-# The reset button should be connected to pin 10 on the GPIO connector.
-# When the button is pressed the pin will be pulled to GND, otherwise it's
-# pulled to SYS_3.3V.
 GPIO_PIN = '199'
 GPIO_PATH = '/sys/class/gpio/'
 PIN_PATH = GPIO_PATH + 'gpio' + GPIO_PIN + '/'
