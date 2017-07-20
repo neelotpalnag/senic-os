@@ -20,13 +20,13 @@ MAX_DURATION = 30   # Ignore button presses longer than this many seconds
 
 def init_gpio():
     if not os.path.exists(PIN_PATH):
-        write_once(GPIO_PATH + 'export', GPIO_PIN)
-    write_once(PIN_PATH + 'direction', 'in')
-    write_once(PIN_PATH + 'active_low', '1')
-    write_once(PIN_PATH + 'edge', 'both')
+        write_file(GPIO_PATH + 'export', GPIO_PIN)
+    write_file(PIN_PATH + 'direction', 'in')
+    write_file(PIN_PATH + 'active_low', '1')
+    write_file(PIN_PATH + 'edge', 'both')
 
 
-def write_once(path, value):
+def write_file(path, value):
     with open(path, 'w') as f:
         f.write(value)
 
