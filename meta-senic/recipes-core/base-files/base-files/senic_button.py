@@ -27,8 +27,8 @@ def init_gpio():
 
 
 def write_file(path, value):
-    with open(path, 'w') as f:
-        f.write(value)
+    with open(path, 'w') as file_descriptor:
+        file_descriptor.write(value)
 
 
 def execute_and_log(command):
@@ -58,16 +58,16 @@ def on_long_press(press_duration):
 def listen_for_button_presses():
     init_gpio()
 
-    f = open(PIN_PATH + 'value', 'r')
-    po = select.poll()
-    po.register(f, select.POLLPRI)
+    pin_value = open(PIN_PATH + 'value', 'r')
+    pin_event = select.poll()
+    pin_event.register(pin_value, select.POLLPRI)
 
     start = 0
     while True:
-        po.poll(None)  # Blocking until button state change
+        pin_event.poll(None)  # Blocking until button state change
 
-        f.seek(0)
-        state = f.read()
+        pin_value.seek(0)
+        state = pin_value.read()
 
         if state == "1\n":
             start = time.time()
