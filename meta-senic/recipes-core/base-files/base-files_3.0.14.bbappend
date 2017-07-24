@@ -1,5 +1,9 @@
 FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}:"
 
+RDEPENDS_${PN} += "\
+  python \
+"
+
 SRC_URI += "file://motd_senic"
 SRC_URI += "file://senic_button.py"
 
