@@ -13,9 +13,8 @@ GPIO_PIN = '199'
 GPIO_PATH = '/sys/class/gpio/'
 PIN_PATH = GPIO_PATH + 'gpio' + GPIO_PIN + '/'
 
-DEBOUNCE = 0.05     # Ignore repeated button presses for the first 50ms
-FACTORY_RESET = 10  # Factory reset after this many seconds
-MAX_DURATION = 30   # Ignore button presses longer than this many seconds
+FACTORY_RESET = 3   # Factory reset after this many seconds
+MAX_DURATION = 20   # Ignore button presses longer than this many seconds
 
 
 def init_gpio():
@@ -39,14 +38,7 @@ def execute_and_log(command):
             daemon.logger.info("    " + line)
 
 
-def on_short_press(press_duration):
-    daemon.logger.info(
-            "Reset button held for %0.2f seconds: REBOOT" %
-            press_duration)
-    execute_and_log('/sbin/reboot')
-
-
-def on_long_press(press_duration):
+def on_press(press_duration):
     daemon.logger.info(
             "Reset button held for %0.2f seconds: FACTORY RESET" %
             press_duration)
@@ -73,11 +65,9 @@ def listen_for_button_presses():
             end = time.time()
             press_duration = end - start
 
-            if press_duration > DEBOUNCE and press_duration < FACTORY_RESET:
-                on_short_press(press_duration)
-            elif press_duration >= FACTORY_RESET and \
-                    press_duration <= MAX_DURATION:
-                on_long_press(press_duration)
+            if press_duration >= FACTORY_RESET and \
+               press_duration < MAX_DURATION:
+                on_press(press_duration)
 
 
 daemon = Daemonize(app=LOG_NAME,
