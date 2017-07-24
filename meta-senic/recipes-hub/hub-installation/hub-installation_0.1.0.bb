@@ -61,7 +61,7 @@ DEPENDS_${PN} = "\
 "
 
 FILESEXTRAPATHS_prepend := "${THISDIR}/files:"
-#SRC_URI = "file://supervisor_senic_hub.conf"
+SRC_URI += "file://LICENSE.txt"
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://${WORKDIR}/LICENSE.txt;md5=62d64e0a0688cba2e9ede69d1f702e1c"
 
