@@ -21,6 +21,7 @@ IMAGE_INSTALL = " \
   ntp \
   python \
   python-supervisor \
+  python-daemonize \
   python3 \
   python3-asn1crypto \
   python3-cffi \

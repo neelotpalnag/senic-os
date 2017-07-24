@@ -82,3 +82,9 @@ However, you can also connect via a serial console (i.e. ``screen /dev/tty.usbse
 
 
 -    nmcli dev wifi con <SSID> password <PASSWORD> ifname wlan0
+
+
+Hardware
+--------
+
+The reset button is connected to pin 10 on the GPIO connector. When the button is pressed the GPIO pin is pulled to GND, otherwise it's pulled to SYS_3.3V.
