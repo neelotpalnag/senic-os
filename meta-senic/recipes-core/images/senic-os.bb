@@ -76,8 +76,6 @@ IMAGE_INSTALL = " \
   python3-zope.deprecation \
   python3-zope.interface \
   hub-configuration \
-  hub-configuration \
-  hub-installation \
   e2fsprogs-resize2fs \
   parted \
 "
