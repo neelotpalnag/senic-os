@@ -24,6 +24,7 @@ IMAGE_INSTALL = " \
   python-daemonize \
   python3 \
   python3-asn1crypto \
+  python3-asyncio \
   python3-cffi \
   python3-chardet \
   python3-click \
