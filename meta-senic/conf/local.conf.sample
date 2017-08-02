@@ -227,3 +227,7 @@ SNC_BACKEND_DATA_LOCATION = "/var/data/senic-hub"
 SNC_HASS_DATA_LOCATION = "/var/data/senic-hub"
 SNC_DEVPI_BASE_URL = "https://pypi.senic.com/"
 SNC_DEVPI_INDEX = "root/pypi"
+
+# Set up our own ntp servers for production!
+# Use this only for beta testing.
+SNC_NTP_HOST = "pool.ntp.org"
