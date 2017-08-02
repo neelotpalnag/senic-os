@@ -54,7 +54,7 @@ IMAGE_INSTALL = " \
   python3-plaster \
   python3-pygobject \
   python3-pydoc \
-  python3-pynotify \
+  python3-pyinotify \
   python3-pyramid \
   python3-pyramid-tm \
   python3-pytz \
