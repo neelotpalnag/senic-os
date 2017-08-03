@@ -1,0 +1,32 @@
+#!/bin/sh
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+
+test -x /usr/sbin/ntpdate || exit 0
+
+if test -f /etc/default/ntpdate ; then
+. /etc/default/ntpdate
+fi
+
+if [ "$1" != "wlan0" ]; then
+	exit 0
+fi
+
+if [ "$2" != "up" ]; then
+	exit 0
+fi
+
+if [ "$NTPSERVERS" = "" ] ; then
+	exit 0
+fi
+
+(
+/etc/init.d/ntpd stop
+
+if /usr/sbin/ntpdate -s $OPTS $NTPSERVERS 2>/dev/null; then
+	if [ "$UPDATE_HWCLOCK" = "yes" ]; then
+		hwclock --systohc || :
+	fi
+fi
+
+/etc/init.d/ntpd start
+) &
