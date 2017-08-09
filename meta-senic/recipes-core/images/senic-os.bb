@@ -19,6 +19,7 @@ IMAGE_INSTALL = " \
   glibc-utils \ 
   networkmanager \
   ntp \
+  ntpdate \
   python \
   python-supervisor \
   python-daemonize \
