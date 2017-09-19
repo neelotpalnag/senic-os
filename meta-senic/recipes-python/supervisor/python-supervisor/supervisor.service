@@ -5,7 +5,7 @@ Description=Supervisor daemon
 
 [Service]
 Type=forking
-ExecStart=/usr/bin/supervisorda -c /etc/supervisor/supervisor.conf
+ExecStart=/usr/bin/supervisord -c /etc/supervisor/supervisor.conf
 ExecStop=/usr/bin/supervisorctl $OPTIONS shutdown
 ExecReload=/usr/bin/supervisorctl $OPTIONS reload
 KillMode=process
