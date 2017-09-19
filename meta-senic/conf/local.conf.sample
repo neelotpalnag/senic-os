@@ -30,6 +30,8 @@ DISTRO = "senic-dev"
 
 # For Mender integration
 MENDER_ARTIFACT_NAME = "release-3"
+# we exceed the default size, so we must set it explicitly
+MENDER_STORAGE_TOTAL_SIZE_MB = "1200"
 
 #
 # Where to place downloads
