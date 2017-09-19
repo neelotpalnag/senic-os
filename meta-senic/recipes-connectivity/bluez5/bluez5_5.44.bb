@@ -45,7 +45,10 @@ NOINST_TOOLS_EXPERIMENTAL ?= " \
 "
 
 inherit senic-base
-SRC_URI += "file://bluetooth.conf"
+SRC_URI += "file://bluetooth.conf \
+	    file://bluetooth.service \
+	"
+
 python do_render_templates() {
   render_template('bluetooth.conf')
 }
@@ -53,6 +56,11 @@ addtask render_templates after do_compile before do_install
 
 do_install_append() {
     install -m 644 ${WORKDIR}/bluetooth.conf ${D}${sysconfdir}/dbus-1/system.d/bluetooth.conf
+
+    if ${@bb.utils.contains('DISTRO_FEATURES', 'systemd', 'true', 'false', d)}; then
+       install -d ${D}${systemd_unitdir}/system
+       install -m 0644 ${WORKDIR}/bluetooth.service ${D}${systemd_unitdir}/system
+    fi
 }
 
 do_render_templates[nostamp] = "1"
