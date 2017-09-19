@@ -32,6 +32,8 @@ DISTRO = "senic-dev"
 MENDER_ARTIFACT_NAME = "release-5"
 # we exceed the default size, so we must set it explicitly
 MENDER_STORAGE_TOTAL_SIZE_MB = "1036"
+# squeeze some more size by reducing the data partition
+MENDER_DATA_PART_SIZE_MB = "10"
 
 #
 # Where to place downloads
