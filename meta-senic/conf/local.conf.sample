@@ -34,6 +34,7 @@ MENDER_ARTIFACT_NAME = "release-6"
 MENDER_STORAGE_TOTAL_SIZE_MB = "1036"
 # squeeze some more size by reducing the data partition
 MENDER_DATA_PART_SIZE_MB = "10"
+MENDER_DATA_PART_DIR_append = " ${DEPLOY_DIR_IMAGE}/hub-data"
 
 #
 # Where to place downloads
