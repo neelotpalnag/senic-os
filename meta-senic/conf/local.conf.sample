@@ -29,7 +29,7 @@ MACHINE = "senic-hub-beta"
 DISTRO = "senic-dev"
 
 # For Mender integration
-MENDER_ARTIFACT_NAME = "release-5"
+MENDER_ARTIFACT_NAME = "release-6"
 # we exceed the default size, so we must set it explicitly
 MENDER_STORAGE_TOTAL_SIZE_MB = "1036"
 # squeeze some more size by reducing the data partition
