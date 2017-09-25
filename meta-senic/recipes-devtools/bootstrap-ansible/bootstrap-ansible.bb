@@ -29,13 +29,9 @@ do_compile () {
 do_install () {
     install -d ${D}/${ROOT_HOME}/.ssh -m 0700
     install -m 0600 ${WORKDIR}/authorized_keys ${D}/${ROOT_HOME}/.ssh/
-    # install the debug network connection for the senic office
-    install -d ${D}/${sysconfdir}/NetworkManager/system-connections -m 0700
-    install -m 0600 ${WORKDIR}/BleOnboarding ${D}/${sysconfdir}/NetworkManager/system-connections/BleOnboarding
 }
 
 FILES_${PN} = "\
     ${ROOT_HOME} \
-    ${sysconfdir}/NetworkManager/system-connections/BleOnboarding \
 "
 
