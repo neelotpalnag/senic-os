@@ -116,7 +116,7 @@ do_deploy() {
     # populate the data partition
     install -m 0755 -d ${DEPLOYDIR}/hub-data/senic-hub
     install -m 0755 -o ${SNC_RUNTIME_USER} -g ${SNC_RUNTIME_USER} ${WORKDIR}/production.ini ${DEPLOYDIR}/hub-data/senic-hub
-    install -m 0755 -o ${SNC_RUNTIME_USER} -g ${SNC_RUNTIME_USER} -d ${DEPLOYDIR}$/hub-data/senic-hub/logs
+    install -m 0755 -o ${SNC_RUNTIME_USER} -g ${SNC_RUNTIME_USER} -d ${DEPLOYDIR}/hub-data/senic-hub/logs
 
 }
 
