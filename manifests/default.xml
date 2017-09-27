@@ -6,6 +6,6 @@
 	<project path="oe" name="openembedded-core" remote="oe" revision="morty" />
 	<project path="oe/bitbake" name="bitbake" remote="oe" revision="1.32" />
 	<project name="meta-openembedded" remote="oe" revision="morty" />
-	<project path="meta-mender" name="mendersoftware/meta-mender" remote="github" revision="c3b1b46" />
+	<project path="meta-mender" name="mendersoftware/meta-mender" remote="github" revision="c3b1b465ce3a27fc7b03a6b7ef596348835cff57" />
 	<project path="meta-go" name="mem/oe-meta-go" remote="github" revision="master" />
 </manifest>
