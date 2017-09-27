@@ -49,6 +49,7 @@ MENDER_INVENTORY_POLL_INTERVAL_SECONDS = "60"
 #
 # The default is a downloads directory under TOPDIR which is the build directory.
 #
+DL_DIR ?= "/var/senic/shared/downloads"
 
 #
 # Where to place shared-state files
@@ -64,6 +65,7 @@ MENDER_INVENTORY_POLL_INTERVAL_SECONDS = "60"
 #
 # The default is a sstate-cache directory under TOPDIR.
 #
+SSTATE_DIR ?= "/var/senic/shared/sstate-cache"
 
 #
 # Where to place the build output
