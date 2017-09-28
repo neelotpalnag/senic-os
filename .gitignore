@@ -3,6 +3,7 @@ bin/
 meta-openembedded/
 oe/
 /meta-mender/
+/meta-go/
 build/
 /shantanu/
 /debug/
