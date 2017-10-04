@@ -14,7 +14,7 @@ DEPENDS += "dtc-native"
 COMPATIBLE_MACHINE = "(senic-hub-beta|senic-hub)"
 
 SRCBRANCH = "senic/v2017.03"
-SRC_URI = "git://git@github.com/getsenic/senic-os-uboot.git;protocol=ssh;branch=${SRCBRANCH}; \
+SRC_URI = "git://github.com/getsenic/senic-os-uboot.git;protocol=git;branch=${SRCBRANCH}; \
 	   file://boot.cmd \
 	   file://0001-sun8i-configs-Add-CONFIG_BOOTCOUNT_LIMIT-ENV-for-men.patch \
 	   file://0002-sunxi-common-Remove-variables-used-by-Mender.patch \
