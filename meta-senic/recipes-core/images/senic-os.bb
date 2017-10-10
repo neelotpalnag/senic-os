@@ -80,11 +80,8 @@ IMAGE_INSTALL = " \
   python3-zope.deprecation \
   python3-zope.interface \
   hub-configuration \
+  senic-hub-button \
   e2fsprogs-resize2fs \
   parted \
   u-boot-fw-utils \
 "
-
-# Custom kernel module to handle Button interrupts
-# IMAGE_INSTALL_append = " senic-button"
-
