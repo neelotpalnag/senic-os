@@ -1,5 +1,8 @@
 MACHINE = "senic-hub-beta"
 DISTRO = "senic-dev"
+DISTRO_VERSION  = "0.1.2"
+TARGET_VENDOR = "-senic"
+MAINTAINER = "Senic GmbH <hi@senic.com>"
 
 # shared locations
 DL_DIR ?= "/var/senic/shared/downloads"
@@ -41,8 +44,7 @@ CONF_VERSION = "1"
 
 # For Mender integration
 #
-
-MENDER_ARTIFACT_NAME = "0.1.1-dev"
+MENDER_ARTIFACT_NAME = "v${DISTRO_VERSION}"
 # we exceed the default size, so we must set it explicitly
 MENDER_STORAGE_TOTAL_SIZE_MB = "1036"
 # squeeze some more size by reducing the data partition
