@@ -1,6 +1,6 @@
 MACHINE = "senic-hub-beta"
 DISTRO = "senic-dev"
-DISTRO_VERSION  = "0.1.2"
+DISTRO_VERSION  = "0.1.3-dev"
 TARGET_VENDOR = "-senic"
 MAINTAINER = "Senic GmbH <hi@senic.com>"
 
