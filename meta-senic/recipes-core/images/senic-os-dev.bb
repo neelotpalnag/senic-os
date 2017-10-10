@@ -17,5 +17,12 @@ IMAGE_INSTALL += " \
 	stress \
 	rsync \
 	screen \
+	lmsensors-sensors \
+	lmsensors-libsensors \
+	lmsensors-sensorsconfconvert \
+	lmsensors-sensord \
+	lmsensors-pwmconfig \
+	lmsensors-sensorsdetect \
+	lmsensors-fancontrol \
 	bootstrap-ansible \
 "
