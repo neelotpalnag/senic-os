@@ -32,6 +32,7 @@ IMAGE_INSTALL = " \
   python3-colander \
   python3-contextlib2 \
   python3-cornice \
+  python3-cornice-swagger \
   python3-cryptography \
   python3-cryptoyaml \
   python3-dbus \
