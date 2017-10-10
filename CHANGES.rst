@@ -1,10 +1,16 @@
 Changelog
 =========
 
-0.1.1 - Unreleased
+0.1.2 - 2017-10-10
 ------------------
 
-*
+* Keep mender and yocto version numbers in sync
+
+
+0.1.1 - 2017-10-10
+------------------
+
+* Internal brown-bag release, working out yocto versioning :-)
 
 
 0.1.0 - 2017-10-10
