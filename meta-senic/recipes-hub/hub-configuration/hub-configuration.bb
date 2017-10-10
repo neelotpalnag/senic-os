@@ -1,6 +1,9 @@
 SUMMARY = "Configure the senic hub"
+PV="${DISTRO_VERSION}"
 DESCRIPTION = "\
-Creates various configuration files"
+The main configuration recipe for the senic hub. \
+It's where it all comes together...\
+"
 DEPENDS_${PN} = "\
   python-supervisor \
   python-daemonize \
