@@ -1,10 +1,14 @@
 Changelog
 =========
 
-0.1.4 - Unreleased
+0.1.5 - Unreleased
 ------------------
 
-*
+* Reset button handler is started by systemd
+
+
+0.1.4 - Unreleased
+------------------
 
 
 0.1.3 - 2017-10-11
