@@ -1,10 +1,14 @@
 Changelog
 =========
 
-0.1.3 - Unreleased
+0.1.3 - 2017-10-11
 ------------------
 
-*
+* Include lm-sensors for development build (#51)
+
+* Remove obsolete filesystem expansion on startup
+
+* Re-enable senic-button (after switch to systemd)
 
 
 0.1.2 - 2017-10-10
