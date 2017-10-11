@@ -6,8 +6,8 @@ import select
 import time
 import os
 
-LOG_NAME = 'senic_button'
-DAEMON_PID = '/var/run/senic_button.pid'
+LOG_NAME = 'senic_hub_button_daemon'
+DAEMON_PID = '/var/run/senic_hub_button_daemon.pid'
 
 GPIO_PIN = '199'
 GPIO_PATH = '/sys/class/gpio/'
@@ -42,7 +42,7 @@ def on_press(press_duration):
     daemon.logger.info(
             "Reset button held for %0.2f seconds: FACTORY RESET" %
             press_duration)
-    execute_and_log('/usr/bin/nmcli connection del bluenet')
+    execute_and_log('/usr/bin/senic_hub_factory_reset')
 
 
 def listen_for_button_presses():
