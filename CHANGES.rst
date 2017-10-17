@@ -1,27 +1,12 @@
 Changelog
 =========
 
-
-0.1.7 - 2017-10-17
-------------------
-
-* add sentry support (#57)
-
-* move application configuration to `/etc/` (away from data partition) (#44)
-
-
-0.1.6 - 2017-10-17
-------------------
-
-* Switching to the new versioning and release system
-
-
-0.1.5 - Unreleased
+0.1.4 - 2017-10-17 
 ------------------
 
 * Reset button handler is started by systemd
-
-0.1.4 - Unreleased
+* add sentry support (#57)
+* move application configuration to /etc/ (away from data partition) (#44)
 
 
 0.1.3 - 2017-10-11
