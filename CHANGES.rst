@@ -1,14 +1,14 @@
 Changelog
 =========
 
-0.1.5 - Unreleased
+0.1.4 - Unreleased
 ------------------
 
 * Reset button handler is started by systemd
 
+* add sentry support (#57)
 
-0.1.4 - Unreleased
-------------------
+* move application configuration to `/etc/` (away from data partition) (#44)
 
 
 0.1.3 - 2017-10-11
