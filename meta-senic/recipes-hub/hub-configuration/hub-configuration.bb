@@ -109,6 +109,9 @@ do_install() {
     install -m 0755 ${WORKDIR}/supervisor_nuimo_app.conf ${D}${sysconfdir}/supervisor/conf.d/nuimo_app.conf
     install -m 0755 ${WORKDIR}/supervisor_device_discovery.conf ${D}${sysconfdir}/supervisor/conf.d/device_discovery.conf
 
+    # app configuration
+    install -m 0755 ${WORKDIR}/production.ini ${D}${sysconfdir}/senic_hub.ini
+
     # global system configuration
     install -m 0755 -d ${D}${sysconfdir}/profile.d/
     install -m 0644 ${WORKDIR}/locales.sh ${D}${sysconfdir}/profile.d/locales.sh
@@ -121,9 +124,6 @@ do_install() {
 do_deploy() {
     # populate the data partition
     install -m 0755 -d ${DEPLOYDIR}/hub-data/senic-hub
-    #install -m 0755 -o ${SNC_RUNTIME_USER} -g ${SNC_RUNTIME_USER} ${WORKDIR}/production.ini ${DEPLOYDIR}/hub-data/senic-hub
-    #install -m 0755 -o ${SNC_RUNTIME_USER} -g ${SNC_RUNTIME_USER} -d ${DEPLOYDIR}/hub-data/senic-hub/logs
-    install -m 0755 ${WORKDIR}/production.ini ${DEPLOYDIR}/hub-data/senic-hub
     install -m 0755 --d ${DEPLOYDIR}/hub-data/senic-hub/logs
     # Create location for network manager connections
     install -m 0755 -d ${DEPLOYDIR}/hub-data/senic-hub/etc/NetworkManager/system-connections
@@ -134,6 +134,7 @@ addtask do_deploy after do_compile before do_build
 
 FILES_${PN} = "\
     ${SNC_BACKEND_DEPLOY_LOCATION} \
+    ${sysconfdir}/senic_hub.ini \
     ${sysconfdir}/supervisor/conf.d/senic_hub.conf \
     ${sysconfdir}/supervisor/conf.d/bluenet.conf \
     ${sysconfdir}/supervisor/conf.d/netwatch.conf \
