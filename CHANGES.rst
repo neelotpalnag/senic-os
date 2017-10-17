@@ -1,6 +1,13 @@
 Changelog
 =========
 
+=======
+0.1.6 - 2017-10-17
+------------------
+
+* Switching to the new versioning and release system
+
+
 0.1.5 - Unreleased
 ------------------
 
