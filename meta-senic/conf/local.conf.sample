@@ -1,7 +1,7 @@
 MACHINE = "senic-hub-beta"
 DISTRO = "senic-dev"
 # actual version is set during build process, this is just a placeholder
-DISTRO_VERSION  = "XXX"
+DISTRO_VERSION = "XXX"
 TARGET_VENDOR = "-senic"
 MAINTAINER = "Senic GmbH <hi@senic.com>"
 
