@@ -9,10 +9,10 @@ inherit kernel
 
 require recipes-kernel/linux/linux-dtb.inc
 
-KBRANCH = "senic/4.10"
-SRCREV = "43be15e4e16d6b2162a5b13e8633e23720ee9f5b"
+KBRANCH = "senic/4.13"
+SRCREV = "e469b218af6fe7cb8c50c4395ae9f3204f8033ae"
 
-PV = "4.10+git${SRCPV}"
+PV = "4.13+git${SRCPV}"
 S = "${WORKDIR}/git"
 
 SRC_URI = "git://github.com/getsenic/senic-os-linux.git;protocol=git;branch=${KBRANCH} \
