@@ -84,4 +84,5 @@ IMAGE_INSTALL = " \
   e2fsprogs-resize2fs \
   parted \
   u-boot-fw-utils \
+  btattach-systemd \
 "
