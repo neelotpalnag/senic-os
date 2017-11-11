@@ -1,4 +1,4 @@
-MACHINE = "senic-hub-beta"
+MACHINE = "senic-hub"
 DISTRO = "senic-dev"
 # actual version is set during build process, this is just a placeholder
 DISTRO_VERSION = "XXX"

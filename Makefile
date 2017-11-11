@@ -1,3 +1,6 @@
+APPEND_VERSION_STRING=""
+
+
 oe/README:  .repo/manifest.xml
 	./bin/repo sync -j3
 
@@ -15,7 +18,7 @@ clean:
 	git clean -fXd
 
 bump_version:
-	$(eval release_version := $(shell git describe --tags --always)) 
+	$(eval release_version := $(shell git describe --tags --always)$(APPEND_VERSION_STRING)) 
 	@echo "Version bumped to: "$(release_version)
 	@sed -i 's/DISTRO_VERSION = .*/DISTRO_VERSION = "$(release_version)"/' conf/local.conf 
 	@sed -i 's/MENDER_ARTIFACT_NAME = .*/MENDER_ARTIFACT_NAME = "$(release_version)"/' conf/local.conf
