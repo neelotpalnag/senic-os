@@ -1,0 +1,11 @@
+[Unit]
+Description=Start btattach, needed to enable Bluetooth for some UART-based Bluetooth chipsets
+[Service]
+Type=simple
+# A delay is needed though, 1s seems enough on my system
+# [Alan] Inherited the sleep. Feel free to question its purpose
+ExecStartPre=/bin/sleep 1s
+ExecStart=/usr/bin/btattach -B /dev/ttyUSB0 -S 115200
+[Install]
+WantedBy=multi-user.target
+
