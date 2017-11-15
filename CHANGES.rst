@@ -1,6 +1,22 @@
 Changelog
 =========
 
+0.1.6 - 2017-11-15
+------------------
+
+* Migrated to kernel 4.13
+* Support for em9304 and nrf52 with USB connection
+* Implements senic-hub version 0.2.241+af8069e
+* Works only with version 0.2.5+ of the mobile app
+
+
+0.1.5 - 2017-11-07
+------------------
+
+* Patch for a bug introduced by the build system
+* No features or bugfixes for our software stack 
+
+
 0.1.4 - 2017-10-17 
 ------------------
 
