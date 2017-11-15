@@ -1,4 +1,7 @@
-APPEND_VERSION_STRING=""
+# For appending a custom string to the version
+# Example.
+# build$ make -f ../Makefile bump_version APPEND_VERSION_STRING="-curry-wurst-edition"
+APPEND_VERSION_STRING=
 
 
 oe/README:  .repo/manifest.xml
