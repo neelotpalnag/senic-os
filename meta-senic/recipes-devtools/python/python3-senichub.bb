@@ -14,9 +14,9 @@ RPROVIDES_${PN} += "python3-senic-hub"
 SNC_DEVPI_INDEX = "tomster/master"
 PYPI_PACKAGE = "senic_hub"
 # version specific info, change this for new releases
-PV = "0.2.200+369297b"
-SRC_URI[sha256sum] = "8ffb432a67189be9fda6db6d000b7f201c3529148fa6c88caf2d8fad48cbf64e"
-PYPI_SRC_URI = "https://pypi.senic.com/getsenic/master/+f/8ff/b432a67189be9/senic_hub-0.2.200+369297b.tar.gz"
+PV = "0.2.241+af8069e"
+SRC_URI[sha256sum] = "7d9d38f4be8a7d5da7e75ff3330fba904ee651e0d0ba2f83efb0d44a23a7a4cc"
+PYPI_SRC_URI = "https://pypi.senic.com/getsenic/master/+f/7d9/d38f4be8a7d5d/senic_hub-0.2.241+af8069e.tar.gz"
 
 do_install_append() {
   # remove static docs
