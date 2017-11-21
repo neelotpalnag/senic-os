@@ -5,20 +5,22 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 REQUIRED_DISTRO_FEATURES= "systemd"
 
-SRC_URI += "file://btattach-nrf52.service \
-            file://btattach-em9304.service "
+SRC_URI += "file://btattach-usb-nrf52.service \
+            file://btattach-usb-em9304.service \
+	    file://btattach-em9304.service"
 
-SYSTEMD_SERVICE_${PN} = "btattach-nrf52.service \
-                         btattach-em9304.service"
+SYSTEMD_SERVICE_${PN} = "btattach-usb-nrf52.service \
+                         btattach-usb-em9304.service \
+			 btattach-em9304.service"
 
 inherit systemd
 
 do_install () {
 
     install -d ${D}${systemd_system_unitdir}
-    install -m 0644 ${WORKDIR}/btattach-nrf52.service ${D}${systemd_system_unitdir}
-    install -m 0644 ${WORKDIR}/btattach-em9304.service ${D}${systemd_system_unitdir}
- 
+    install -m 0644 ${WORKDIR}/btattach-usb-nrf52.service ${D}${systemd_system_unitdir}
+    install -m 0644 ${WORKDIR}/btattach-usb-em9304.service ${D}${systemd_system_unitdir}
+    install -m 0644 ${WORKDIR}/btattach-em9304.service ${D}${systemd_system_unitdir} 
 }
 
 
