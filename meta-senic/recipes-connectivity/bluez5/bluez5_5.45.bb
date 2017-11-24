@@ -1,4 +1,4 @@
-require recipes-connectivity/bluez5/bluez5.inc
+require bluez5.inc
 
 REQUIRED_DISTRO_FEATURES = "bluez5"
 
